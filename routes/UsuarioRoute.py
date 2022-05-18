@@ -1,13 +1,26 @@
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, HTTPException
 
-from models.UsuarioModel import UsuarioModel
-from repositories.UsuarioRepository import criar_usuario
+from models.UsuarioModel import UsuarioCriarModel
+from services.UsuarioService import (
+    registrar_usuario
+)
 
 router = APIRouter()
 
 
 @router.post("/", response_description="Rota para criar novo usuário")
-async def rota_criar_usuario(usuario: UsuarioModel = Body(...)):
-    resultado = await criar_usuario(usuario)
+async def rota_criar_usuario(usuario: UsuarioCriarModel = Body(...)):
+    try:
+        resultado = await registrar_usuario(usuario)
 
-    return resultado
+        if not resultado['status'] == 201:
+            raise HTTPException(status_code=resultado['status'], detail=resultado['mensagem'])
+
+        return resultado
+    except Exception as erro:
+        print(erro)
+
+        return {
+            "mensagem": "Erro interno no servidor"
+        }
+
