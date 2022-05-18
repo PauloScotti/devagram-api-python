@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93158546-bf41-4e1f-8507-135f44d5ffa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/models/UsuarioModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/UsuarioRepository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/UsuarioRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/UsuarioRoute.py" afterDir="false" />
     </list>
@@ -35,13 +36,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/projeto-devaria/devagram-api-python/Server.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projeto-devaria/devagram-api-python/Server.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Server" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="devagram-api-python" />
