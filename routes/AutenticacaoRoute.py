@@ -10,7 +10,6 @@ router = APIRouter()
 async def login(usuario: UsuarioLoginModel = Body(...)):
     resultado = await login_service(usuario)
 
-
     if not resultado['status'] == 200:
         raise HTTPException(status_code=resultado['status'], detail=resultado['mensagem'])
 
@@ -18,6 +17,6 @@ async def login(usuario: UsuarioLoginModel = Body(...)):
 
     token = gerar_token_jwt(resultado['dados']['id'])
 
-    resultado['dados']['token'] = token
+    resultado['token'] = token
 
     return resultado

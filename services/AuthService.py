@@ -1,15 +1,14 @@
 import time
-
 import jwt
 from decouple import config
 
 from models.UsuarioModel import UsuarioLoginModel
-from repositories.UsuarioRepository import UsuarioRepository
+from repositories.UsuarioRepository import buscar_usuario_por_email
 from utils.AuthUtil import verificar_senha
+
 
 JWT_SECRET = config('JWT_SECRET')
 
-usuarioRepository = UsuarioRepository()
 
 def gerar_token_jwt(usuario_id: str) -> str:
     payload = {
@@ -32,15 +31,19 @@ def decodificar_token_jwt(token: str):
             return None
     except Exception as erro:
         print(erro)
-        return None
+        return {
+            "mensagem": "Erro interno no servidor",
+            "dados": str(erro),
+            "status": 500
+        }
 
 
 async def login_service(usuario: UsuarioLoginModel):
-    usuario_encontrado = await usuarioRepository.buscar_usuario_por_email(usuario.email)
+    usuario_encontrado = await buscar_usuario_por_email(usuario.email)
 
     if not usuario_encontrado:
         return {
-            "mensagem": "Email ou Senha incorretos.",
+            "mensagem": "E-mail ou Senha incorretos.",
             "dados": "",
             "status": 401
         }
@@ -53,7 +56,7 @@ async def login_service(usuario: UsuarioLoginModel):
             }
         else:
             return {
-                "mensagem": "Email ou Senha incorretos.",
+                "mensagem": "E-mail ou Senha incorretos.",
                 "dados": "",
                 "status": 401
             }
