@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93158546-bf41-4e1f-8507-135f44d5ffa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/AutenticacaoRoute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/AuthService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/UsuarioService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/AuthUtil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/UsuarioModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/UsuarioModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/UsuarioRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/UsuarioRepository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/UsuarioRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/UsuarioRoute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/AutenticacaoRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/AutenticacaoRoute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/AuthService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/AuthService.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
